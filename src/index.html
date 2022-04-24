@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    flex: {
+                        '00100px': '0 0 100px',
+                        "0080px": "0 0 80px",
+                        "0050px": "0 0 50px",
+                        "00622px": "0 0 622px",
+                        "00418px": "0 0 418px"
+                    },
+                    fontFamily: {
+                        'poppins': 'Poppins'
+                    },
+                    backgroundImage: {
+                        "advertise": "url('./images/Frame\ 2.png')",
+                    },
+                    height: {
+                        "adv363px": "363px"
+
+
+                    }
+
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-poppins h-full m-0 flex flex-row bg-[#202020]">
+    <aside class="flex flex-col items-center w-36 ">
+        <div class="logo flex bg-[#F6F0D8] mt-10 w-20 h-20 left-28 rounded-3xl items-center justify-center ">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="icons flex flex-col flex-auto justify-center gap-5 ">
+            <img src="images/app.png" alt="Application">
+            <img src="images/Vector (1).png" alt="Application">
+            <img src="images/Group 1.png" alt="Application">
+            <img src="images/Vector (2).png" alt="Application">
+            <img src="images/Group.png" alt="Application">
+        </div>
+        <img class="logout mb-20" src="images/login.png" alt="Application">
+    </aside>
+    <main class="container flex-auto mt-4 mr-4 mb-4 ml-0 bg-[white] rounded-[45px] p-8">
+        <header class="flex items-center pb-7 gap-4">
+            <span class="overview flex font-bold text-4xl text-[#000000] flex-auto">Overview</span>
+            <img src="images/Group 9 (1).png" alt="">
+            <img src="images/Group 10.png" alt="">
+            <img src="images/grandson 1.png" alt="">
+            <img src="images/Zoia M..png" alt="">
+            <img src="images/Group 11.png" alt="">
+        </header>
+        <div class="overflow-auto">
+            <div class="headings flex items-center justify-center font-semibold text-3xl text-[#000000] pt-7">
+                <span class="flex-auto">Portfolio</span>
+                <span class="flex-00622px">Your Assets</span>
+                <img src="images/Group 32.png" alt="Application">
+            </div>
+            <div class="box-container flex mt-4  gap-8">
+                <div class="box-1 flex-auto left-72 rounded-3xl bg-[#E5F2FE]">
+                    <div class="flex flex-col">
+                        <div class="flex">
+                            <div class="amount1 flex-auto mt-6 ml-9 font-semibold text-3xl">$17643.41</div>
+                            <div class="option-bar1 mt-9 mr-7"><img src="images/Group 3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="portfolio-bal font-normal text-sm ml-9">portfolio balance</div>
+                    </div>
+                </div>
+                <div class="box-2 flex w-48 h-60 bg-[#E5DEF0] rounded-3xl box-border p-8">
+                    <div class="flex flex-col w-full">
+                        <div class="flex items-center">
+                            <div class="amount2 flex-auto  font-bold text-2xl">1.25 BTC</div>
+                            <div><img src="images/Group 3.png" alt=""></div>
+                        </div>
+                        <div class="co-amount font-normal text-base">$2948.04.</div>
+                        <div class="flex items-end flex-auto">
+                            <div
+                                class="bitcoin-box flex items-center justify-center w-14 h-14 bg-[#FFFFFF] rounded-2xl ">
+                                <img src="images/Vector (4).png" alt="">
+                            </div>
+                            <div class="bitcoin-growth flex-auto font-normal text-sm text-right mb-4">0.14%
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="box-3 flex w-48 h-60 bg-[#D6EDDA] rounded-3xl box-border p-8">
+                    <div class="flex flex-col w-full">
+                        <div class="flex items-center">
+                            <div class="amount2 flex-auto font-bold text-2xl">0.32 LTC</div>
+                            <div><img src="images/Group 3.png" alt=""></div>
+                        </div>
+                        <div class="co-amount font-normal text-base">$2948.04.</div>
+                        <div class=" flex flex-auto items-end">
+                            <div
+                                class="litecoin-box flex items-center justify-center w-14 h-14 bg-[#FFFFFF] rounded-2xl">
+                                <img src="images/litecoin 1.png" alt="">
+                            </div>
+                            <div class="litecoin-growth flex-auto font-normal text-sm text-right mb-4">
+                                0.31%</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="box-4 flex w-48 h-60 bg-[#D6EDDA] rounded-3xl box-border p-8">
+                    <div class="flex flex-col w-full">
+                        <div class="flex items-center">
+                            <div class="amount2 flex-auto font-bold text-2xl">1.25 ETH</div>
+                            <div><img src="images/Group 3.png" alt=""></div>
+                        </div>
+                        <div class="co-amount font-normal text-base">$2948.04.</div>
+                        <div class=" flex flex-auto items-end">
+                            <div
+                                class="etherium-box flex items-center justify-center w-14 h-14 bg-[#FFFFFF] rounded-2xl">
+                                <img src="images/ethereum 1.png" alt="">
+                            </div>
+                            <div class="etherium-growth flex-auto font-normal text-sm text-right mb-4">
+                                0.27%</div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="flex mt-16 gap-8">
+                <div class="market-info flex flex-auto flex-col">
+                    <div class="flex w-full gap-4">
+                        <div class="market-down flex-auto font-bold text-2xl text-[#000000]">Market is down
+                            0.80%</div>
+                        <div>
+                            <select name="timeline" id="timeline"
+                                class="w-24 h-11 rounded-3xl text-center font-normal text-base tracking-wide ">
+                                <option value="24h">24h</option>
+                                <option value="1day">1d</option>
+                                <option value="1week">1w </option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="market" id="market"
+                                class="w-24 h-11 rounded-3xl text-center font-normal text-base tracking-wide">
+                                <option value="gain">Top gainers</option>
+                                <option value="loss">Top loosers</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="categories flex w-full mt-6 font-normal text-sm">
+                        <div class="flex-auto">name</div>
+                        <div class="flex-00100px">price</div>
+                        <div class="flex-0080px">change</div>
+                        <div class="flex-00100px">market cap</div>
+                        <div class="flex-0050px">watch</div>
+                    </div>
+                    <div class="flex w-full mt-6 items-center">
+                        <div class="flex flex-auto gap-5 items-center">
+                            <img src="./images/Group 16.png" alt="">
+                            <div class="flex-auto flex flex-col">
+                                <span class="font-semibold text-base">Band Protocol</span>
+                                <span class="font-normal text-sm ">BAND</span>
+                            </div>
+                        </div>
+                        <div class="flex-00100px">$2.42</div>
+                        <div class="flex-0080px">+13.38%</div>
+                        <div class="flex-00100px">$399.8M</div>
+                        <div class="flex-0050px"><img src="images/Vector 8.png" alt=""></div>
+                    </div>
+                    <div class="flex w-full mt-6 items-center">
+                        <div class="flex-auto flex gap-5 items-center">
+                            <img src="./images/Group 17.png" alt="">
+                            <div class="flex-auto flex flex-col">
+                                <span class="font-semibold text-base">VeChain</span>
+                                <span class="font-normal text-sm">VET</span>
+                            </div>
+                        </div>
+                        <div class="flex-00100px">$7.48</div>
+                        <div class="flex-0080px">+11.19%</div>
+                        <div class="flex-00100px">$152.5M</div>
+                        <div class="flex-0050px"><img src="images/Vector 8.png" alt=""></div>
+                    </div>
+                    <div class="flex w-full mt-6 items-center">
+                        <div class="flex-auto flex gap-5 items-center">
+                            <img src="./images/Group 19.png" alt="">
+                            <div class="flex-auto flex flex-col">
+                                <span class="font-semibold text-base">Aave</span>
+                                <span class="font-normal text-sm">AAVE</span>
+                            </div>
+                        </div>
+                        <div class="flex-00100px">$0.0184</div>
+                        <div class="flex-0080px">+7.57%</div>
+                        <div class="flex-00100px">$1.2B</div>
+                        <div class="flex-0050px"><img src="images/Vector 8.png" alt=""></div>
+                    </div>
+                    <div class="flex w-full mt-6 items-center">
+                        <div class="flex-auto flex gap-5 items-center">
+                            <img src="./images/Group 20.png" alt="">
+                            <div class="flex-auto flex flex-col">
+                                <span class="font-semibold text-base">Waves</span>
+                                <span class="font-normal text-sm">WAVES</span>
+                            </div>
+                        </div>
+                        <div class="flex-00100px">$7.48</div>
+                        <div class="flex-0080px">+11.19%</div>
+                        <div class="flex-00100px">$152.5M</div>
+                        <div class="flex-0050px"><img src="images/Vector 8.png" alt=""></div>
+                    </div>
+                </div>
+                <div
+                    class="advertise bg-advertise flex flex-00418px h-adv363px flex-col bg-[#222222] pt-16 pr-8 pb-0 pl-8 box-border bg-no-repeat bg-right-bottom rounded-[30px]">
+                    <div class="line-1 flex items-center font-bold text-[30px] text-[#FFFFFF]">
+                        Earn <img src="./images/Group 29.png" alt="">Crypto
+                    </div>
+                    <div class="line-2 flex items-center font-bold text-[30px] text-[#FFFFFF]"> with Coinview Earn!
+                    </div>
+                    <div class="line-3 font-normal text-[15px] text-[#FFFFFF] mt-2.5"> learn about different
+                        cryptocurrencies and earn them for free</div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

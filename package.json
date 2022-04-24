@@ -1,0 +1,17 @@
+{
+  "name": "web-over-npm",
+  "version": "1.0.0",
+  "description": "```\r node --version\r npm --version\r ```",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

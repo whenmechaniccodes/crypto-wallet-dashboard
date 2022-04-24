@@ -1,5 +1,5 @@
 {
-  "name": "web-over-npm",
+  "name": "crypto-dashboard",
   "version": "1.0.0",
   "description": "```\r node --version\r npm --version\r ```",
   "main": "index.js",

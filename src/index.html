@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crypto Wallet Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -24,13 +25,16 @@
                         "0012rem": "0 0 12rem",
                     },
                     fontFamily: {
-                        'poppins': 'Poppins'
+                        'poppins': 'Poppins',
                     },
                     backgroundImage: {
                         "advertise": "url('./images/Frame\ 2.png')",
                     },
                     height: {
                         "adv363px": "363px",
+                    },
+                    width:{
+                        "500": "500px",
                     }
                 }
             }
@@ -44,38 +48,62 @@
             <img src="images/logo.png" alt="">
         </div>
         <div class="icons flex flex-col flex-auto justify-center gap-16 lg:gap-5 ">
-            <img src="images/app.png" alt="Application">
-            <img src="images/Vector (1).png" alt="Application">
-            <img src="images/Group 1.png" alt="Application">
-            <img src="images/Vector (2).png" alt="Application">
-            <img src="images/Group.png" alt="Application">
+            <img class="cursor-pointer" src="images/app.png" alt="Application">
+            <img class="cursor-pointer" src="images/Vector (1).png" alt="Application">
+            <img class="cursor-pointer" src="images/Group 1.png" alt="Application">
+            <img class="cursor-pointer" src="images/Vector (2).png" alt="Application">
+            <img class="cursor-pointer" src="images/Group.png" alt="Application">
         </div>
-        <img class="logout mb-20" src="images/login.png" alt="Application">
+        <img class="logout mb-20 cursor-pointer" src="images/login.png" alt="Application">
     </aside>
     <main class="container flex-auto mt-4 mr-4 mb-4 ml-0 bg-[white] rounded-[45px] p-4 lg:p-8">
         <header class="flex items-center pb-7 gap-4">
             <span class="overview flex font-bold text-4xl text-[#000000] flex-auto">Overview</span>
-            <img src="images/Group 9 (1).png" alt="">
-            <img src="images/Group 10.png" alt="">
-            <img src="images/grandson 1.png" alt="">
-            <img src="images/Zoia M..png" alt="">
-            <img src="images/Group 11.png" alt="">
+            <img class="cursor-pointer" src="images/Group 9 (1).png" alt="">
+            <img class="cursor-pointer" src="images/Group 10.png" alt="">
+            <img class="cursor-pointer" src="images/grandson 1.png" alt="">
+            <img class="cursor-pointer" src="images/Zoia M..png" alt="">
+            <img class="cursor-pointer" src="images/Group 11.png" alt="">
         </header>
-        <div>
+        <div class="h-[calc(100%-88px)] overflow-auto">
             <div class="headings flex items-center justify-center font-semibold text-3xl text-[#000000] pt-7">
                 <span class="flex-auto">Portfolio</span>
                 <span class="flex-00622px  hidden lg:block">Your Assets</span>
-                <img src="images/Group 32.png" alt="Application">
+                <img class="cursor-pointer" src="images/Group 32.png" alt="Application">
             </div>
             <div class="box-container flex  flex-wrap mt-4 gap-4 lg:gap-8">
-                <div class="box-1 flex-full lg:flex-auto left-72 rounded-3xl bg-[#E5F2FE]">
-                    <div class="flex flex-col">
+                <div class="box-1 flex flex-full lg:flex-auto left-72 rounded-3xl bg-[#E5F2FE]">
+                    <div class="flex flex-col flex-full">
                         <div class="flex">
                             <div class="amount1 flex-auto mt-6 ml-9 font-semibold text-3xl">$17643.41</div>
-                            <div class="option-bar1 mt-9 mr-7"><img src="images/Group 3.png" alt="">
+                            <div class="option-bar1 mt-9 mr-7 cursor-pointer"><img src="images/Group 3.png" alt="">
                             </div>
                         </div>
                         <div class="portfolio-bal font-normal text-sm ml-9">portfolio balance</div>
+                        <div class="flex-col w-500"> 
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <script>
+                            const ctx = document.getElementById('myChart').getContext('2d');
+                            const myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ['1H', '24H', '1W', '1M', '1Y', 'All'],
+                                    datasets: [
+                                        {
+                                            label: '',
+                                            data: [400, 590, 1000, 800, 10, 300],
+                                            fill: false,
+                                            borderColor: 'rgb(75, 192, 192)',
+                                            tension: 0.1,
+                                        },
+                                    ],
+                                },
+                                options: {
+                                    maintainAspectRatio: false,
+                                }
+                            });
+                        </script>
                     </div>
                 </div>
                 <div class="headings flex  font-semibold text-3xl text-[#000000] flex-full block lg:hidden ">
@@ -85,7 +113,7 @@
                     <div class="flex flex-col w-full">
                         <div class="flex items-center">
                             <div class="amount2 flex-auto  font-bold text-2xl">1.25 BTC</div>
-                            <div><img src="images/Group 3.png" alt=""></div>
+                            <div><img class="cursor-pointer" src="images/Group 3.png" alt=""></div>
                         </div>
                         <div class="co-amount font-normal text-base">$2948.04.</div>
                         <div class="flex items-end flex-auto">
@@ -103,7 +131,7 @@
                     <div class="flex flex-col w-full">
                         <div class="flex items-center">
                             <div class="amount2 flex-auto font-bold text-2xl">0.32 LTC</div>
-                            <div><img src="images/Group 3.png" alt=""></div>
+                            <div><img class="cursor-pointer" src="images/Group 3.png" alt=""></div>
                         </div>
                         <div class="co-amount font-normal text-base">$2948.04.</div>
                         <div class=" flex flex-auto items-end">
@@ -121,7 +149,7 @@
                     <div class="flex flex-col w-full">
                         <div class="flex items-center">
                             <div class="amount2 flex-auto font-bold text-2xl">1.25 ETH</div>
-                            <div><img src="images/Group 3.png" alt=""></div>
+                            <div><img class="cursor-pointer" src="images/Group 3.png" alt=""></div>
                         </div>
                         <div class="co-amount font-normal text-base">$2948.04.</div>
                         <div class=" flex flex-auto items-end">
@@ -176,7 +204,7 @@
                         <div class="flex-00100px">$2.42</div>
                         <div class="flex-0080px">+13.38%</div>
                         <div class="flex-00100px">$399.8M</div>
-                        <div class="flex-0050px"><img src="images/Vector 8.png" alt=""></div>
+                        <div class="flex-0050px"><img class="cursor-pointer" src="images/Vector 8.png" alt=""></div>
                     </div>
                     <div class="flex w-full mt-6 items-center">
                         <div class="flex-auto flex gap-5 items-center">
@@ -189,7 +217,7 @@
                         <div class="flex-00100px">$7.48</div>
                         <div class="flex-0080px">+11.19%</div>
                         <div class="flex-00100px">$152.5M</div>
-                        <div class="flex-0050px"><img src="images/Vector 8.png" alt=""></div>
+                        <div class="flex-0050px"><img class="cursor-pointer" src="images/Vector 8.png" alt=""></div>
                     </div>
                     <div class="flex w-full mt-6 items-center">
                         <div class="flex-auto flex gap-5 items-center">
@@ -202,7 +230,7 @@
                         <div class="flex-00100px">$0.0184</div>
                         <div class="flex-0080px">+7.57%</div>
                         <div class="flex-00100px">$1.2B</div>
-                        <div class="flex-0050px"><img src="images/Vector 8.png" alt=""></div>
+                        <div class="flex-0050px"><img class="cursor-pointer" src="images/Vector 8.png" alt=""></div>
                     </div>
                     <div class="flex w-full mt-6 items-center">
                         <div class="flex-auto flex gap-5 items-center">
@@ -215,13 +243,13 @@
                         <div class="flex-00100px">$7.48</div>
                         <div class="flex-0080px">+11.19%</div>
                         <div class="flex-00100px">$152.5M</div>
-                        <div class="flex-0050px"><img src="images/Vector 8.png" alt=""></div>
+                        <div class="flex-0050px"><img class="cursor-pointer" src="images/Vector 8.png" alt=""></div>
                     </div>
                 </div>
                 <div
                     class="advertise bg-advertise flex flex-00418px h-adv363px flex-col bg-[#222222] pt-16 pr-8 pb-0 pl-8 box-border bg-no-repeat bg-right-bottom rounded-[30px]">
                     <div class="line-1 flex items-center font-bold text-[30px] text-[#FFFFFF]">
-                        Earn <img src="./images/Group 29.png" alt="">Crypto
+                        Earn <img class="cursor-pointer" src="./images/Group 29.png" alt="">Crypto
                     </div>
                     <div class="line-2 flex items-center font-bold text-[30px] text-[#FFFFFF]"> with Coinview Earn!
                     </div>
@@ -233,10 +261,7 @@
             </div>
 
         </div>
-
-
     </main>
-
 </body>
 
 </html>
